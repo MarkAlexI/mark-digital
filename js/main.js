@@ -147,7 +147,7 @@ const messages = {
     "privacy.intro": "1. Вступ",
     "privacy.introContent": "Ця політика конфіденційності описує, як ми збираємо, використовуємо та захищаємо ваші дані при використанні додатків. Ми поважаємо вашу приватність і зобов'язуємося захищати вашу особисту інформацію.",
     "privacy.collection": "2. Збір інформації",
-    "privacy.collectionContent": "Ми не збираємо ніякої особистої інформації при використанні нашого додатків. Адд-они працюють локально на вашому пристрої та не передають жодних даних на наші сервери або третім сторонам.",
+    "privacy.collectionContent": "Ми не збираємо ніякої особистої інформації при використанні наших додатків. Адд-они працюють локально на вашому пристрої та не передають жодних даних на наші сервери або третім сторонам.",
     "privacy.usage": "3. Використання інформації",
     "privacy.usageContent": "Оскільки ми не збираємо особисту інформацію, ми не маємо можливості використовувати її в будь-який спосіб.",
     "privacy.security": "4. Безпека",
@@ -243,7 +243,7 @@ const About = {
   </section>`,
   methods: {
     sendMail() {
-      window.open('mailto: mark.digital.net.100@gmail.com?subject=Vacancy&body=How do you do');
+      window.open('mailto: markdigital100@outlook.com?subject=Vacancy&body=How do you do');
     },
   },
   mounted() {
@@ -419,7 +419,7 @@ const Offer = {
             <p><span>{{ $t("offer.providerDetailsContent4") }}</span></p>
             <p>{{ $t("offer.providerDetailsContent5") }}</p>
             <p>{{ $t("offer.providerDetailsContent6") }}</p>
-            <p>{{ $t("offer.providerDetailsContent7") }}<a href="mailto:mark.digital.net.100@gmail.com">mark.digital.net.100@gmail.com</a></p>
+            <p>{{ $t("offer.providerDetailsContent7") }}<a href="mailto:markdigital100@outlook.com">markdigital100@outlook.com</a></p>
           </div>
         </section>`
 };
@@ -523,7 +523,7 @@ app.component('drop-down-langs', {
 app.component('my-footer', {
   template: `<footer>
     <p>{{ $t("footer.name") }}</p>
-    <p>{{ $t("footer.email") }}: <a href="mailto:mark.digital.net.100@gmail.com">mark.digital.net.100@gmail.com</a></p>
+    <p>{{ $t("footer.email") }}: <a href="mailto:markdigital100@outlook.com">markdigital100@outlook.com</a></p>
     <p>{{ $t("footer.copyright") }}</p>
   </footer>`
 });
