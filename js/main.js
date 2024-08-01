@@ -232,7 +232,7 @@ const About = {
       <p>{{ $t("about.description") }}</p>
       
       <h2>{{ $t("about.productsTitle") }}</h2>
-      <p>{{ $t("about.productsDescription1") }}<a href="https://chrome.google.com/webstore" target="_blank">Chrome Web Store</a>{{ $t("about.productsDescription2") }}<a href="https://amo.mozilla.org" target="_blank">AMO</a>{{ $t("about.productsDescription3") }}<a href="https://www.buymeacoffee.com" target="_blank">Buy Me a Coffee</a>{{ $t("about.productsDescription4") }}</p>
+      <p>{{ $t("about.productsDescription1") }}<a href="https://chrome.google.com/webstore/detail/gaefccmkkolgdkabjfekngcmagioflne" target="_blank">Chrome Web Store</a>{{ $t("about.productsDescription2") }}<a href="https://addons.mozilla.org/firefox/addon/getjoke" target="_blank">AMO</a>{{ $t("about.productsDescription3") }}<a href="https://www.buymeacoffee.com" target="_blank">Buy Me a Coffee</a>{{ $t("about.productsDescription4") }}</p>
       
       <h2>{{ $t("about.teamTitle") }}</h2>
       <p>{{ $t("about.teamDescription") }}</p>
