@@ -166,7 +166,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 button {
@@ -308,12 +308,12 @@ p span {
   header {
     min-height: 6rem;
     margin-bottom: 3rem;
-    padding: 2rem 6rem 0 8rem;
+    padding: 1.5rem 6rem 0 8rem;
     font-size: 1.7rem;
   }
   
   .dropdown {
-    top: 2.5rem;
+    top: 2rem;
     right: 3rem;
   }
 }
@@ -330,12 +330,12 @@ p span {
   
   header {
     min-height: 8rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
     font-size: 2rem;
   }
   
   .dropdown {
-    top: 3.5rem;
+    top: 2.5rem;
     right: 5rem;
   }
 }

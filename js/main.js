@@ -328,7 +328,7 @@ const GetJoke = {
         <div v-if="joke" id="joke-display" v-html="joke"></div>
         <div class="download-buttons">
           <a href="https://addons.mozilla.org/firefox/addon/getjoke" class="download-btn">{{ $t("getjoke.downloadFirefox") }}</a>
-          <a href="https://chrome.google.com/webstore/detail/get-joke-extension" class="download-btn">{{ $t("getjoke.downloadChrome") }}</a>
+          <a href="https://chrome.google.com/webstore/detail/gaefccmkkolgdkabjfekngcmagioflne" class="download-btn">{{ $t("getjoke.downloadChrome") }}</a>
         </div>
       </div>
     </section>
