@@ -306,7 +306,7 @@ p span {
   }
   
   header {
-    min-height: 8rem;
+    min-height: 6rem;
     margin-bottom: 3rem;
     padding: 2rem 6rem 0 8rem;
     font-size: 1.7rem;
@@ -329,7 +329,7 @@ p span {
   }
   
   header {
-    min-height: 10rem;
+    min-height: 8rem;
     padding-top: 3rem;
     font-size: 2rem;
   }
