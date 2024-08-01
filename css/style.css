@@ -324,6 +324,10 @@ p span {
     padding: 0 13rem 8rem 13rem;
   }
   
+  nav ul {
+    padding: 0 8rem;
+  }
+  
   header {
     min-height: 10rem;
     padding-top: 3rem;
