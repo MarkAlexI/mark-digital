@@ -354,7 +354,7 @@ const Privacy = {
         <p>{{ $t("privacy.changesContent") }}</p>
         <h2>{{ $t("privacy.contacts") }}</h2>
         <p>{{ $t("privacy.contactsContent") }}</p>
-        <p>{{ $t("privacy.email") }}: <a href="mailto:mark-digital.net.100@gmail.com">mark-digital.net.100@gmail.com</a></p>
+        <p>{{ $t("privacy.email") }}: <a href="mailto:markdigital100@outlook.com">markdigital100@outlook.com</a></p>
         <p>{{ $t("privacy.website") }}: <router-link to="/">mark-digital.space</router-link></p>
       </div>
     </section>

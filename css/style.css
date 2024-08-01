@@ -234,7 +234,7 @@ footer a {
 
 .dropdown {
   position: absolute;
-  top: .5rem;
+  top: 1rem;
   right: 1rem;
   margin-left: auto;
   margin-right: 20px;
@@ -290,7 +290,13 @@ p span {
   }
   
   header {
-    padding-left: 2rem;
+    min-height: 7.5rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .dropdown {
+    top: 2rem;
   }
 }
 
@@ -300,7 +306,32 @@ p span {
   }
   
   header {
+    min-height: 10rem;
     margin-bottom: 3rem;
-    padding: 0 6rem 0 8rem;
+    padding: 2rem 6rem 0 8rem;
+    font-size: 1.7rem;
+  }
+  
+  .dropdown {
+    top: 2.5rem;
+    right: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 100%;
+    padding: 0 13rem 8rem 13rem;
+  }
+  
+  header {
+    min-height: 12rem;
+    padding-top: 3rem;
+    font-size: 2rem;
+  }
+  
+  .dropdown {
+    top: 3.5rem;
+    right: 5rem;
   }
 }
