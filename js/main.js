@@ -217,9 +217,13 @@ const messages = {
   }
 };
 
+const mainLocale = (function() {
+  return window.navigator.language == 'uk-UA' || window.navigator.language == 'ru-RU' ? 'ua' : 'en';
+})();
+
 const i18n = VueI18n.createI18n({
   legacy: false,
-  locale: 'ua',
+  locale: mainLocale,
   fallbackLocale: 'en',
   messages,
 });
@@ -449,9 +453,14 @@ const router = VueRouter.createRouter({
 });
 
 const app = Vue.createApp({
+  provide() {
+    return {
+      mainLocale: this.mainLocale
+    }
+  },
   data() {
     return {
-
+      mainLocale
     }
   },
 });
@@ -480,9 +489,10 @@ app.component('my-header', {
 });
 
 app.component('drop-down-langs', {
+  inject: ['mainLocale'],
   data() {
     return {
-      selectedLanguage: 'ua',
+      selectedLanguage: this.mainLocale,
       isDropdownOpened: false
     }
   },
