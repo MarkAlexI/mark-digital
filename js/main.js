@@ -36,6 +36,43 @@ const messages = {
     "getjoke.downloadFirefox": "Download for Firefox",
     "getjoke.downloadChrome": "Download for Chrome",
     "getjoke.error": "An error occurred while fetching the joke. Please try again later.",
+    "widgets.title": "Useful Widgets and Plugins",
+    "widgets.description": "Widgets and plugins add new functionalities to your website, enhancing user experience.",
+    "widgets.customWidgetText": "Mark Digital can create a custom widget tailored to your needs.",
+    "widgets.benefitsTitle": "Benefits of Using Widgets",
+    "widgets.benefit1": "Enhances website functionality.",
+    "widgets.benefit2": "Adds new features that make online work easier.",
+    "widgets.benefit3": "Improves user engagement.",
+    "widgets.benefit4": "Customizable to fit specific needs.",
+    "widgets.exampleTitle": "Practical Example",
+    "widgets.exampleDescription": "The widget in the bottom right corner of the page (Currencies Widget) is a practical, useful example of such software.",
+    "widgets.downloadLink": "Download for free",
+    "websites.title": "Custom Website Development",
+    "websites.description": "At Mark Digital, we specialize in creating custom websites tailored to your needs. From simple landing pages to complex web applications, we handle it all.",
+    "websites.examplesTitle": "Our Work",
+    "websites.converterTitle": "Unit Converter",
+    "websites.converterDescription": "A versatile unit converter for various measures including length, numbers, and angles.",
+    "websites.portfolioTitle": "Portfolio Site",
+    "websites.portfolioDescription": "A portfolio website showcasing various projects and skills.",
+    "websites.benefitsTitle": "Why Choose Us",
+    "websites.benefit1": "Professional and modern design.",
+    "websites.benefit2": "Responsive and mobile-friendly layouts.",
+    "websites.benefit3": "Customized solutions to meet your needs.",
+    "websites.benefit4": "Reliable and timely project completion.",
+    "websites.contactTitle": "Get in Touch",
+    "websites.contactDescription": "Contact us today to discuss your project requirements and get a free quote.",
+    "serverTechnologies.title": "Server Technologies and Databases",
+    "serverTechnologies.description": "At Mark Digital, we have extensive experience with server technologies and databases. From building robust back-end systems to managing data with various databases, we offer comprehensive solutions.",
+    "serverTechnologies.examplesTitle": "Our Projects",
+    "serverTechnologies.lykkeStoreTitle": "Lykke Store",
+    "serverTechnologies.lykkeStoreDescription": "A full-fledged Node.js server for the online store Lykke Store, featuring robust functionality and seamless performance.",
+    "serverTechnologies.skillsTitle": "Technologies We Use",
+    "serverTechnologies.skillNode": "Node.js for building scalable and efficient servers.",
+    "serverTechnologies.skillMongoDB": "MongoDB for flexible and scalable NoSQL database solutions.",
+    "serverTechnologies.skillSQLite3": "SQLite3 for lightweight and efficient local databases.",
+    "serverTechnologies.skillPostgreSQL": "PostgreSQL for advanced relational database management.",
+    "serverTechnologies.contactTitle": "Get in Touch",
+    "serverTechnologies.contactDescription": "Contact us today to discuss your server and database needs, and get a free consultation.",
     "privacy.title": "Privacy Policy",
     "privacy.intro": "1. Introduction",
     "privacy.introContent": "This privacy policy describes how we collect, use, and protect your data when using our applications. We respect your privacy and are committed to protecting your personal information.",
@@ -102,6 +139,9 @@ const messages = {
     "header.home": "Home",
     "header.addons": "Add-ons",
     "header.getJoke": "Get Joke Extension",
+    "header.widgets": "Widgets And Plugins",
+    "header.websites": "Custom Website Development",
+    "header.servers": "Server Technologies And DB",
     "header.privacy": "Privacy Policy",
     "header.offer": "Public Offer Agreement",
     "footer.name": "Individual Proprietor Markov Oleksandr Ivanovych",
@@ -143,6 +183,43 @@ const messages = {
     "getjoke.downloadFirefox": "Скачати для Firefox",
     "getjoke.downloadChrome": "Скачати для Chrome",
     "getjoke.error": "Виникла помилка при отриманні жарту. Спробуйте ще раз пізніше.",
+    "widgets.title": "Корисні Віджети та Плагіни",
+    "widgets.description": "Віджети та плагіни додають нові функціональності на ваш сайт, покращуючи користувацький досвід.",
+    "widgets.customWidgetText": "Mark Digital може створити корисний віджет на замовлення.",
+    "widgets.benefitsTitle": "Переваги Використання Віджетів",
+    "widgets.benefit1": "Покращує функціональність сайту.",
+    "widgets.benefit2": "Додають нові функції, що полегшують роботу в інтернеті.",
+    "widgets.benefit3": "Покращує залученість користувачів.",
+    "widgets.benefit4": "Можливість налаштування під конкретні потреби.",
+    "widgets.exampleTitle": "Практичний Приклад",
+    "widgets.exampleDescription": "Віджет справа внизу сторінки (Currencies Widget) є практичним корисним прикладом такого роду програм.",
+    "widgets.downloadLink": "Завантажити безкоштовно",
+    "websites.title": "Розробка Сайтів на Замовлення",
+    "websites.description": "У Mark Digital ми спеціалізуємося на створенні сайтів на замовлення, що відповідають вашим потребам. Від простих лендінгів до складних веб-додатків — ми робимо все.",
+    "websites.examplesTitle": "Наші Роботи",
+    "websites.converterTitle": "Конвертер Одиниць",
+    "websites.converterDescription": "Універсальний конвертер одиниць для різних величин, включаючи довжину, числа та кути.",
+    "websites.portfolioTitle": "Сайт-Портфоліо",
+    "websites.portfolioDescription": "Сайт-портфоліо, що демонструє різноманітні проекти та навички.",
+    "websites.benefitsTitle": "Чому Обирають Нас",
+    "websites.benefit1": "Професійний та сучасний дизайн.",
+    "websites.benefit2": "Адаптивні та мобільно-дружні макети.",
+    "websites.benefit3": "Індивідуальні рішення для задоволення ваших потреб.",
+    "websites.benefit4": "Надійне та своєчасне виконання проектів.",
+    "websites.contactTitle": "Зв'яжіться з Нами",
+    "websites.contactDescription": "Зв'яжіться з нами сьогодні, щоб обговорити ваші вимоги до проекту та отримати безкоштовну консультацію.",
+    "serverTechnologies.title": "Серверні Технології та Бази Даних",
+    "serverTechnologies.description": "У Mark Digital ми маємо великий досвід роботи з серверними технологіями та базами даних. Від побудови надійних серверних систем до управління даними з використанням різних баз даних — ми пропонуємо комплексні рішення.",
+    "serverTechnologies.examplesTitle": "Наші Проекти",
+    "serverTechnologies.lykkeStoreTitle": "Lykke Store",
+    "serverTechnologies.lykkeStoreDescription": "Повноцінний сервер на Node.js для онлайн-магазину Lykke Store з високою функціональністю та бездоганною продуктивністю.",
+    "serverTechnologies.skillsTitle": "Використовувані Технології",
+    "serverTechnologies.skillNode": "Node.js для створення масштабованих та ефективних серверів.",
+    "serverTechnologies.skillMongoDB": "MongoDB для гнучких та масштабованих NoSQL рішень.",
+    "serverTechnologies.skillSQLite3": "SQLite3 для легких та ефективних локальних баз даних.",
+    "serverTechnologies.skillPostgreSQL": "PostgreSQL для передового управління реляційними базами даних.",
+    "serverTechnologies.contactTitle": "Зв'яжіться з Нами",
+    "serverTechnologies.contactDescription": "Зв'яжіться з нами сьогодні, щоб обговорити ваші потреби у серверних технологіях та базах даних, і отримати безкоштовну консультацію.",
     "privacy.title": "Політика конфіденційності",
     "privacy.intro": "1. Вступ",
     "privacy.introContent": "Ця політика конфіденційності описує, як ми збираємо, використовуємо та захищаємо ваші дані при використанні додатків. Ми поважаємо вашу приватність і зобов'язуємося захищати вашу особисту інформацію.",
@@ -209,6 +286,9 @@ const messages = {
     "header.home": "Головна",
     "header.addons": "Адд-они",
     "header.getJoke": "Get Joke Extension",
+    "header.widgets": "Віджети та Плагіни",
+    "header.websites": "Розробка Сайтів на Замовлення",
+    "header.servers": "Серверні технології та БД",
     "header.privacy": "Політика конфіденційності",
     "header.offer": "Договір публічної оферти",
     "footer.name": "ФОП Марков Олександр Іванович",
@@ -321,7 +401,7 @@ const GetJoke = {
     <section class="joke-extension">
       <div class="container">
         <h1>{{ $t("getjoke.title") }}</h1>
-        <p>{{ $t("getjoke.description1") }} <a href="https://v2.jokeapi.dev">JokeAPI</a>.</p>
+        <p>{{ $t("getjoke.description1") }} <a href="https://v2.jokeapi.dev" target="_blank">JokeAPI</a>.</p>
         <p>{{ $t("getjoke.description2") }}</p>
         <br>
         <p>{{ $t("getjoke.screenshot") }}</p>
@@ -331,9 +411,149 @@ const GetJoke = {
         <button @click="getJoke">{{ $t("getjoke.getJokeButton") }}</button>
         <div v-if="joke" id="joke-display" v-html="joke"></div>
         <div class="download-buttons">
-          <a href="https://addons.mozilla.org/firefox/addon/getjoke" class="download-btn">{{ $t("getjoke.downloadFirefox") }}</a>
-          <a href="https://chrome.google.com/webstore/detail/gaefccmkkolgdkabjfekngcmagioflne" class="download-btn">{{ $t("getjoke.downloadChrome") }}</a>
+          <a href="https://addons.mozilla.org/firefox/addon/getjoke" target="_blank" class="download-btn">{{ $t("getjoke.downloadFirefox") }}</a>
+          <a href="https://chrome.google.com/webstore/detail/gaefccmkkolgdkabjfekngcmagioflne" target="_blank" class="download-btn">{{ $t("getjoke.downloadChrome") }}</a>
         </div>
+      </div>
+    </section>
+  `
+};
+
+const WidgetPage = {
+  data() {
+    return {
+      widgetScreenshot: '/images/widget.png',
+      scriptElement: null
+    }
+  },
+  template: `
+    <section class="widget-page">
+      <div class="container">
+        <section class="about-widgets">
+          <h1>{{ $t("widgets.title") }}</h1>
+          <p>{{ $t("widgets.description") }}</p>
+          <p>{{ $t("widgets.customWidgetText") }}</p>
+        </section>
+        <section class="widget-benefits">
+          <h2>{{ $t("widgets.benefitsTitle") }}</h2>
+          <ul>
+            <li>{{ $t("widgets.benefit1") }}</li>
+            <li>{{ $t("widgets.benefit2") }}</li>
+            <li>{{ $t("widgets.benefit3") }}</li>
+            <li>{{ $t("widgets.benefit4") }}</li>
+          </ul>
+        </section>
+        <section class="practical-example">
+          <h2>{{ $t("widgets.exampleTitle") }}</h2>
+          <p>{{ $t("widgets.exampleDescription") }}</p>
+          <img :src="widgetScreenshot" alt="Currencies Widget Screenshot">
+          <a href="https://github.com/MarkAlexI/currenciesWidget" target="_blank">{{ $t("widgets.downloadLink") }}</a>
+        </section>
+      </div>
+    </section>
+  `,
+  mounted() {
+    this.scriptElement = document.createElement('script');
+    this.scriptElement.src = '/js/currenciesWidget.min.js';
+    this.scriptElement.async = true;
+
+    document.body.appendChild(this.scriptElement);
+  },
+  beforeUnmount() {
+    if (this.scriptElement) {
+      document.body.removeChild(this.scriptElement);
+      this.scriptElement = null;
+    }
+
+    const currencyWidgetField = document.getElementById('currency_widget_field');
+    if (currencyWidgetField) {
+      const parentDiv = currencyWidgetField.closest('div');
+      if (parentDiv && parentDiv.parentNode) {
+        parentDiv.parentNode.removeChild(parentDiv);
+      }
+    }
+  }
+};
+
+const WebsitesPage = {
+  data() {
+    return {
+      converterScreenshot: '/images/converter.png',
+      portfolioScreenshot: '/images/portfolio.png'
+    };
+  },
+  template: `
+    <section class="websites-page">
+      <div class="container">
+        <section class="intro">
+          <h1>{{ $t("websites.title") }}</h1>
+          <p>{{ $t("websites.description") }}</p>
+        </section>
+        <section class="examples">
+          <h2>{{ $t("websites.examplesTitle") }}</h2>
+          <div class="example">
+            <h3>{{ $t("websites.converterTitle") }}</h3>
+            <p>{{ $t("websites.converterDescription") }}</p>
+            <img :src="converterScreenshot" alt="Converter Screenshot">
+          </div>
+          <div class="example">
+            <h3>{{ $t("websites.portfolioTitle") }}</h3>
+            <p>{{ $t("websites.portfolioDescription") }}</p>
+            <img :src="portfolioScreenshot" alt="Portfolio Screenshot">
+          </div>
+        </section>
+        <section class="benefits">
+          <h2>{{ $t("websites.benefitsTitle") }}</h2>
+          <ul>
+            <li>{{ $t("websites.benefit1") }}</li>
+            <li>{{ $t("websites.benefit2") }}</li>
+            <li>{{ $t("websites.benefit3") }}</li>
+            <li>{{ $t("websites.benefit4") }}</li>
+          </ul>
+        </section>
+        <section class="contact">
+          <h2>{{ $t("websites.contactTitle") }}</h2>
+          <p>{{ $t("websites.contactDescription") }}</p>
+        </section>
+      </div>
+    </section>
+  `
+};
+
+const ServerTechnologiesPage = {
+  data() {
+    return {
+      lykkeStoreScreenshot: '/images/lykke-store.png'
+    };
+  },
+  template: `
+    <section class="server-technologies-page">
+      <div class="container">
+        <section class="intro">
+          <h1>{{ $t("serverTechnologies.title") }}</h1>
+          <p>{{ $t("serverTechnologies.description") }}</p>
+        </section>
+        <section class="examples">
+          <h2>{{ $t("serverTechnologies.examplesTitle") }}</h2>
+          <div class="example">
+            <h3>{{ $t("serverTechnologies.lykkeStoreTitle") }}</h3>
+            <p>{{ $t("serverTechnologies.lykkeStoreDescription") }}</p>
+            <img :src="lykkeStoreScreenshot" alt="Lykke Store Screenshot">
+          </div>
+        </section>
+        <section class="skills">
+          <h2>{{ $t("serverTechnologies.skillsTitle") }}</h2>
+          <ul>
+            <li>{{ $t("serverTechnologies.skillNode") }}</li>
+            <li>{{ $t("serverTechnologies.skillMongoDB") }}</li>
+            <li>{{ $t("serverTechnologies.skillSQLite3") }}</li>
+            <li>{{ $t("serverTechnologies.skillPostgreSQL") }}</li>
+          </ul>
+        </section>
+        <section class="contact">
+          <h2>{{ $t("serverTechnologies.contactTitle") }}</h2>
+          <p>{{ $t("serverTechnologies.contactDescription") }}</p>
+        </section>
       </div>
     </section>
   `
@@ -358,7 +578,7 @@ const Privacy = {
         <p>{{ $t("privacy.changesContent") }}</p>
         <h2>{{ $t("privacy.contacts") }}</h2>
         <p>{{ $t("privacy.contactsContent") }}</p>
-        <p>{{ $t("privacy.email") }}: <a href="mailto:markdigital100@outlook.com">markdigital100@outlook.com</a></p>
+        <p>{{ $t("privacy.email") }}: <a href="mailto:markdigital100@outlook.com" target="_blank">markdigital100@outlook.com</a></p>
         <p>{{ $t("privacy.website") }}: <router-link to="/">mark-digital.space</router-link></p>
       </div>
     </section>
@@ -423,7 +643,7 @@ const Offer = {
             <p><span>{{ $t("offer.providerDetailsContent4") }}</span></p>
             <p>{{ $t("offer.providerDetailsContent5") }}</p>
             <p>{{ $t("offer.providerDetailsContent6") }}</p>
-            <p>{{ $t("offer.providerDetailsContent7") }}<a href="mailto:markdigital100@outlook.com">markdigital100@outlook.com</a></p>
+            <p>{{ $t("offer.providerDetailsContent7") }}<a href="mailto:markdigital100@outlook.com" target="_blank">markdigital100@outlook.com</a></p>
           </div>
         </section>`
 };
@@ -442,8 +662,11 @@ const routes = [
   { path: '/', component: About },
   { path: '/addons', component: Addons },
   { path: '/getjoke', component: GetJoke },
+  { path: '/widgets', component: WidgetPage },
   { path: '/privacy', component: Privacy },
   { path: '/offer', component: Offer },
+  { path: '/websites', component: WebsitesPage },
+  { path: '/server-technologies', component: ServerTechnologiesPage },
   { path: '/:pathMatch(.*)*', component: NotFound }
 ];
 
@@ -478,6 +701,9 @@ app.component('my-header', {
             <li><router-link to="/">{{ $t("header.home") }}</router-link></li>
             <li><router-link to="/addons">{{ $t("header.addons") }}</router-link></li>
             <li><router-link to="/getjoke">{{ $t("header.getJoke") }}</router-link></li>
+            <li><router-link to="/widgets">{{ $t("header.widgets") }}</router-link></li>
+            <li><router-link to="/websites">{{ $t("header.websites") }}</router-link></li>
+            <li><router-link to="/server-technologies">{{ $t("header.servers") }}</router-link></li>
             <li><router-link to="/privacy">{{ $t("header.privacy") }}</router-link></li>
             <li><router-link to="/offer">{{ $t("header.offer") }}</router-link></li>
           </ul>
@@ -533,7 +759,7 @@ app.component('drop-down-langs', {
 app.component('my-footer', {
   template: `<footer>
     <p>{{ $t("footer.name") }}</p>
-    <p>{{ $t("footer.email") }}: <a href="mailto:markdigital100@outlook.com">markdigital100@outlook.com</a></p>
+    <p>{{ $t("footer.email") }}: <a href="mailto:markdigital100@outlook.com" target="_blank">markdigital100@outlook.com</a></p>
     <p>{{ $t("footer.copyright") }}</p>
   </footer>`
 });

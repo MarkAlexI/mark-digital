@@ -99,11 +99,11 @@ ol li {
   margin-bottom: 10px;
 }
 
-.addons ul, .offer ul {
+.addons ul, .widget-benefits ul, .benefits ul, .skills ul, .offer ul {
   list-style: none;
 }
 
-.addons li::before {
+.addons li::before, .widget-benefits li::before, .benefits li::before, .skills li::before {
   content: "• ";
   color: chartreuse;
 }
@@ -274,6 +274,7 @@ footer a {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 0px 1.5rem 8rem 1.5rem;
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .logo__link {
@@ -282,6 +283,14 @@ footer a {
 
 p span {
   font-weight: bold;
+}
+
+#currency_widget_field {
+  color: black;
+}
+
+#currency_widget_data tr:nth-child(even) {
+  background-color: white;
 }
 
 @media (min-width: 640px) {
