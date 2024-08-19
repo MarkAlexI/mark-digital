@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+  <meta name="description" content="Ми спеціалізуємось на розробці інноваційних веб-розширень та програмного забезпечення. Наша мета - забезпечити вас корисними інструментами для покращення вашого цифрового досвіду.">
+  <meta name="keywords" content="Mark Digital, розробка веб-сайтів, сайти під ключ, замовити сайт, сайт під ключ, веб-розширення, віджети, website development, buy a site, web applications, addons, web extension">
+  <meta property="og:title" content="Продаж програмного забезпечення та створення веб-розширень, віджетів та сайтів | Mark Digital">
+  <meta property="og:description" content="Пропонуємо продаж програмного забезпечення та послуги з розробки веб-розширень, віджетів і сайтів. Професійний підхід та індивідуальні рішення для вашого бізнесу.">
+  <meta property="og:image" content="https://mark-digital.space/favicon.ico">
+  <meta property="og:url" content="https://mark-digital.space/">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mark-digital.space">
+
   <!-- IOS APP ICON + MOBILE SAFARI -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#1A1A1A">
-  <meta name="apple-mobile-web-app-title" content="Welcome to Mark Digital">
+  <meta name="apple-mobile-web-app-title" content="Розробка веб-сайтів - Welcome to Mark Digital">
 
   <!-- ANDROID/CHROME -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -25,13 +34,13 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 
-  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-  <script src="https://unpkg.com/vue-router@next"></script>
-  <script src="https://unpkg.com/vue-i18n@9/dist/vue-i18n.global.prod.js"></script>
+  <script src="https://unpkg.com/vue@3.4.35/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vue-router@4.0.13/dist/vue-router.global.js"></script>
+  <script src="https://unpkg.com/vue-i18n@9.13.1/dist/vue-i18n.global.prod.js"></script>
 
-  <script defer="defer" src="js/main.js"></script>
+  <script type="module" defer="defer" src="js/main.js"></script>
 
-  <title>Welcome to Mark Digital</title>
+  <title> Розробка веб-сайтів - Welcome to Mark Digital </title>
 </head>
 
 <body>
@@ -46,8 +55,11 @@
       </transition>
     </router-view>
 
+    <popup-form></popup-form>
+    <consent-banner></consent-banner>
     <my-footer></my-footer>
   </div>
+  
 </body>
 
 </html>

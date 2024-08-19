@@ -1,301 +1,5 @@
-'use strict';
-
-const messages = {
-  en: {
-    "dropdown.en": 'English',
-    "dropdown.ua": 'Ukrainian',
-    "about.welcome": "Welcome to Mark Digital!",
-    "about.description": "We specialize in developing innovative web extensions and software. Our goal is to provide you with useful tools to improve your digital experience.",
-    "about.productsTitle": "Our products",
-    "about.productsDescription1": "We offer both free and paid solutions. Check out our web extensions available on ",
-    "about.productsDescription2": " and ",
-    "about.productsDescription3": ". Your donations through ",
-    "about.productsDescription4": " will help us create even more useful products.",
-    "about.teamTitle": "Our team",
-    "about.teamDescription": "We are currently focused on developing and improving our products. Soon you will learn more about our team and our plans for the future.",
-    "about.contactsTitle": "Contacts",
-    "about.contactsDescription": "Stay connected for all the news and updates. For more information, you can contact us via email or social media.",
-    "addons.title": "What are web extensions?",
-    "addons.description": "Web extensions are small software modules that add functionality to your web browser. They can modify the interface, add new features, or integrate other services.",
-    "addons.benefitsTitle": "How are web extensions useful?",
-    "addons.benefit1": "Enhance the usability of the browser.",
-    "addons.benefit2": "Add new features that make working on the internet easier.",
-    "addons.benefit3": "Integration with other web services and platforms.",
-    "addons.benefit4": "Ability to personalize the browser to your needs.",
-    "addons.customAddonsTitle": "Custom web extensions",
-    "addons.customAddonsDescription1": "If you need a unique web extension for your business or personal needs, we can create it to order. We have experience in developing browser applications and are ready to help you realize your ideas.",
-    "addons.customAddonsDescription2": "Contact us using the details at the bottom of the page to discuss your project.",
-    "addons.exampleAddonTitle": "Example Add-on",
-    "addons.exampleAddonDescription": "One of our most popular add-ons is",
-    "getjoke.title": "Get Joke Extension",
-    "getjoke.description1": "Integration with the web service",
-    "getjoke.description2": "Get random jokes for a good mood.",
-    "getjoke.screenshot": "Screenshot:",
-    "getjoke.tryApi": "Try API:",
-    "getjoke.getJokeButton": "Get a Joke",
-    "getjoke.downloadFirefox": "Download for Firefox",
-    "getjoke.downloadChrome": "Download for Chrome",
-    "getjoke.error": "An error occurred while fetching the joke. Please try again later.",
-    "widgets.title": "Useful Widgets and Plugins",
-    "widgets.description": "Widgets and plugins add new functionalities to your website, enhancing user experience.",
-    "widgets.customWidgetText": "Mark Digital can create a custom widget tailored to your needs.",
-    "widgets.benefitsTitle": "Benefits of Using Widgets",
-    "widgets.benefit1": "Enhances website functionality.",
-    "widgets.benefit2": "Adds new features that make online work easier.",
-    "widgets.benefit3": "Improves user engagement.",
-    "widgets.benefit4": "Customizable to fit specific needs.",
-    "widgets.exampleTitle": "Practical Example",
-    "widgets.exampleDescription": "The widget in the bottom right corner of the page (Currencies Widget) is a practical, useful example of such software.",
-    "widgets.downloadLink": "Download for free",
-    "websites.title": "Custom Website Development",
-    "websites.description": "At Mark Digital, we specialize in creating custom websites tailored to your needs. From simple landing pages to complex web applications, we handle it all.",
-    "websites.examplesTitle": "Our Work",
-    "websites.converterTitle": "Unit Converter",
-    "websites.converterDescription": "A versatile unit converter for various measures including length, numbers, and angles.",
-    "websites.portfolioTitle": "Portfolio Site",
-    "websites.portfolioDescription": "A portfolio website showcasing various projects and skills.",
-    "websites.benefitsTitle": "Why Choose Us",
-    "websites.benefit1": "Professional and modern design.",
-    "websites.benefit2": "Responsive and mobile-friendly layouts.",
-    "websites.benefit3": "Customized solutions to meet your needs.",
-    "websites.benefit4": "Reliable and timely project completion.",
-    "websites.contactTitle": "Get in Touch",
-    "websites.contactDescription": "Contact us today to discuss your project requirements and get a free quote.",
-    "serverTechnologies.title": "Server Technologies and Databases",
-    "serverTechnologies.description": "At Mark Digital, we have extensive experience with server technologies and databases. From building robust back-end systems to managing data with various databases, we offer comprehensive solutions.",
-    "serverTechnologies.examplesTitle": "Our Projects",
-    "serverTechnologies.lykkeStoreTitle": "Lykke Store",
-    "serverTechnologies.lykkeStoreDescription": "A full-fledged Node.js server for the online store Lykke Store, featuring robust functionality and seamless performance.",
-    "serverTechnologies.skillsTitle": "Technologies We Use",
-    "serverTechnologies.skillNode": "Node.js for building scalable and efficient servers.",
-    "serverTechnologies.skillMongoDB": "MongoDB for flexible and scalable NoSQL database solutions.",
-    "serverTechnologies.skillSQLite3": "SQLite3 for lightweight and efficient local databases.",
-    "serverTechnologies.skillPostgreSQL": "PostgreSQL for advanced relational database management.",
-    "serverTechnologies.contactTitle": "Get in Touch",
-    "serverTechnologies.contactDescription": "Contact us today to discuss your server and database needs, and get a free consultation.",
-    "privacy.title": "Privacy Policy",
-    "privacy.intro": "1. Introduction",
-    "privacy.introContent": "This privacy policy describes how we collect, use, and protect your data when using our applications. We respect your privacy and are committed to protecting your personal information.",
-    "privacy.collection": "2. Information Collection",
-    "privacy.collectionContent": "We do not collect any personal information when using our applications. The add-ons operate locally on your device and do not transmit any data to our servers or third parties.",
-    "privacy.usage": "3. Information Usage",
-    "privacy.usageContent": "Since we do not collect personal information, we have no way to use it in any manner.",
-    "privacy.security": "4. Security",
-    "privacy.securityContent": "We take appropriate measures to protect your information. The applications do not require access to your personal data or other confidential information.",
-    "privacy.thirdParties": "5. Interaction with Third Parties",
-    "privacy.thirdPartiesContent": "Our applications do not interact with any third-party companies. All features work autonomously on your device.",
-    "privacy.changes": "6. Changes to the Privacy Policy",
-    "privacy.changesContent": "We may update this privacy policy from time to time. All changes will be posted on this page. We recommend periodically reviewing this page to stay informed about any changes.",
-    "privacy.contacts": "7. Contacts",
-    "privacy.contactsContent": "If you have any questions regarding this privacy policy, please contact us using the following details:",
-    "privacy.email": "Email",
-    "privacy.website": "Website",
-    "offer.title": "Public Offer Agreement",
-    "offer.intro": "This Agreement is a public offer (proposal) by individual proprietor Oleksandr Ivanovych Markov (hereinafter referred to as the 'Provider'), addressed to any individual or legal entity willing to use the services or purchase goods offered by the Provider through the website.",
-    "offer.generalProvisions": "1. General Provisions",
-    "offer.generalProvisionsContent1": "1.1. This Agreement is concluded between the Provider and the User.",
-    "offer.generalProvisionsContent2": "1.2. The Agreement is an official document and is published on the Provider's website.",
-    "offer.generalProvisionsContent3": "1.3. The User confirms that they are acquainted with the terms of this Agreement and accept them by using the services or purchasing the goods offered on the website.",
-    "offer.termsDefinitions": "2. Terms and Definitions",
-    "offer.termsDefinitionsContent1": "2.1. 'User' means any individual or legal entity who has accepted the terms of this Agreement and uses the services or goods offered on the website.",
-    "offer.termsDefinitionsContent2": "2.2. 'Services' means any services provided by the Provider through the website.",
-    "offer.termsDefinitionsContent3": "2.3. 'Goods' means any digital products offered for sale by the Provider through the website.",
-    "offer.rightsDutiesParties": "3. Rights and Duties of the Parties",
-    "offer.rightsDutiesProvider": "3.1. Rights and Duties of the Provider:",
-    "offer.rightsDutiesProviderContent1": "3.1.1. Provide the User with access to the Services and Goods in accordance with the terms of this Agreement.",
-    "offer.rightsDutiesProviderContent2": "3.1.2. Inform the User of changes in the terms of provision of Services and Goods.",
-    "offer.rightsDutiesProviderContent3": "3.1.3. Ensure the confidentiality of the User's personal data in accordance with the Privacy Policy.",
-    "offer.rightsDutiesUser": "3.2. Rights and Duties of the User:",
-    "offer.rightsDutiesUserContent1": "3.2.1. Use the Services and Goods in accordance with the terms of this Agreement.",
-    "offer.rightsDutiesUserContent2": "3.2.2. Pay for the Services and Goods in accordance with the terms of this Agreement.",
-    "offer.rightsDutiesUserContent3": "3.2.3. Not distribute or use the Goods for illegal purposes.",
-    "offer.paymentProcedure": "4. Payment Procedure",
-    "offer.paymentProcedureContent1": "4.1. Payment for Services and Goods is made by the User by transferring funds to the Provider's account specified on the website, or through payment systems indicated on the website.",
-    "offer.paymentProcedureContent2": "4.2. Settlements between the parties are made in the national currency of Ukraine (hryvnia). If necessary, payment can be made in another currency in accordance with the terms of a separate agreement.",
-    "offer.paymentProcedureContent3": "4.3. All costs associated with the transfer of funds are borne by the User.",
-    "offer.paymentProcedureContent4": "4.4. Donations are voluntary and do not oblige the Provider to provide additional services or goods other than those already specified in the Agreement.",
-    "offer.liabilityParties": "5. Liability of the Parties",
-    "offer.liabilityPartiesContent1": "5.1. For failure or improper performance of obligations under this Agreement, the parties are liable in accordance with the current legislation of Ukraine.",
-    "offer.liabilityPartiesContent2": "5.2. The Provider is not responsible for any damage that may arise for the User as a result of using web extensions and related programs.",
-    "offer.liabilityPartiesContent3": "5.3. The User is responsible for complying with the laws of their country when using the Provider's web extensions and related programs.",
-    "offer.liabilityPartiesContent4": "5.4. The Provider is not responsible for failure or improper performance of obligations under this Agreement if it was caused by force majeure circumstances, such as war, riots, natural disasters, fires, strikes, actions of public authorities, etc.",
-    "offer.concludingProvisions": "6. Concluding Provisions",
-    "offer.concludingProvisionsContent1": "6.1. The Agreement comes into force from the moment of its acceptance by the User and is valid until the parties have fully fulfilled their obligations.",
-    "offer.concludingProvisionsContent2": "6.2. All disputes arising in connection with the execution of this Agreement are resolved through negotiations between the parties.",
-    "offer.concludingProvisionsContent3": "6.3. If an agreement cannot be reached, the dispute is submitted to the court in accordance with the current legislation of Ukraine.",
-    "offer.concludingProvisionsContent4": "6.4. This agreement is drawn up in Ukrainian. For international users, a translation of this Agreement into English may be provided. In case of discrepancies between the Ukrainian and English versions of the Agreement, the Ukrainian version takes precedence.",
-    "offer.concludingProvisionsContent5": "6.5. All changes and additions to this Agreement are valid only if they are made in writing and signed by both parties or published by the Provider on the official website.",
-    "offer.providerDetails": "7. Provider Details",
-    "offer.providerDetailsContent1": "Individual Proprietor Oleksandr Ivanovych Markov",
-    "offer.providerDetailsContent2": "TIN: 3157117350",
-    "offer.providerDetailsContent3": "Registration No.: 2010350000000602837 dated 22.07.2024",
-    "offer.providerDetailsContent4": "IBAN: UA623052990000026006050592532",
-    "offer.providerDetailsContent5": "Single tax payer of the 3rd group, rate 5%. Not a VAT payer",
-    "offer.providerDetailsContent6": "Address: Ukraine, 52800, Dnipropetrovsk region, Synelnykivskyi district, Pershotravensk city, Ukrainska street, house 18",
-    "offer.providerDetailsContent7": "Email: ",
-    "page404.notFound": 'Page Not Found',
-    "page404.info": 'Return on main page',
-    "page404.back": 'Go Home',
-    "header.home": "Home",
-    "header.addons": "Add-ons",
-    "header.getJoke": "Get Joke Extension",
-    "header.widgets": "Widgets And Plugins",
-    "header.websites": "Custom Website Development",
-    "header.servers": "Server Technologies And DB",
-    "header.privacy": "Privacy Policy",
-    "header.offer": "Public Offer Agreement",
-    "footer.name": "Individual Proprietor Markov Oleksandr Ivanovych",
-    "footer.email": "Email",
-    "footer.copyright": "Mark Digital © 2024"
-  },
-  ua: {
-    "dropdown.en": 'Англійська',
-    "dropdown.ua": 'Українська',
-    "about.welcome": "Вітаємо на Mark Digital!",
-    "about.description": "Ми спеціалізуємось на розробці інноваційних веб-розширень та програмного забезпечення. Наша мета - забезпечити вас корисними інструментами для покращення вашого цифрового досвіду.",
-    "about.productsTitle": "Наші продукти",
-    "about.productsDescription1": "Ми пропонуємо як безкоштовні, так і платні рішення. Ознайомтесь із нашими веб-розширеннями, доступними в ",
-    "about.productsDescription2": " та ",
-    "about.productsDescription3": ". Ваші донати через ",
-    "about.productsDescription4": " допоможуть нам створювати ще більше корисних продуктів.",
-    "about.teamTitle": "Наша команда",
-    "about.teamDescription": "В даний момент ми зосереджені на розробці та вдосконаленні наших продуктів. Скоро ви дізнаєтеся більше про нашу команду та наші плани на майбутнє.",
-    "about.contactsTitle": "Контакти",
-    "about.contactsDescription": "Залишайтеся на зв’язку, щоб бути в курсі всіх новин та оновлень. Для отримання додаткової інформації ви можете звернутися до нас через електронну пошту або соціальні мережі.",
-    "addons.title": "Що таке веб-розширення?",
-    "addons.description": "Веб-розширення - це невеликі програмні модулі, які додають функціональність вашому веб-браузеру. Вони можуть змінювати інтерфейс, додавати нові можливості або інтегрувати інші сервіси.",
-    "addons.benefitsTitle": "Чим корисні веб-розширення?",
-    "addons.benefit1": "Покращують зручність використання браузера.",
-    "addons.benefit2": "Додають нові функції, що полегшують роботу в інтернеті.",
-    "addons.benefit3": "Інтеграція з іншими веб-сервісами та платформами.",
-    "addons.benefit4": "Можливість персоналізації браузера під свої потреби.",
-    "addons.customAddonsTitle": "Створення веб-розширень під замовлення",
-    "addons.customAddonsDescription1": "Якщо вам потрібно унікальне веб-розширення для вашого бізнесу чи особистих потреб, ми можемо створити його під замовлення. Маємо досвід у розробці додатків для браузерів та готові допомогти вам реалізувати ваші ідеї.",
-    "addons.customAddonsDescription2": "Зв'яжіться з нами за контактними даними внизу сторінки для обговорення вашого проекту.",
-    "addons.exampleAddonTitle": "Приклад адд-ону",
-    "addons.exampleAddonDescription": "Один з наших найпопулярніших адд-онів -",
-    "getjoke.title": "Get Joke Extension",
-    "getjoke.description1": "Інтеграція з веб-сервісом",
-    "getjoke.description2": "Отримання рандомних мемів для гарного настрою.",
-    "getjoke.screenshot": "Скріншот:",
-    "getjoke.tryApi": "Спробувати API:",
-    "getjoke.getJokeButton": "Отримати жарт",
-    "getjoke.downloadFirefox": "Скачати для Firefox",
-    "getjoke.downloadChrome": "Скачати для Chrome",
-    "getjoke.error": "Виникла помилка при отриманні жарту. Спробуйте ще раз пізніше.",
-    "widgets.title": "Корисні Віджети та Плагіни",
-    "widgets.description": "Віджети та плагіни додають нові функціональності на ваш сайт, покращуючи користувацький досвід.",
-    "widgets.customWidgetText": "Mark Digital може створити корисний віджет на замовлення.",
-    "widgets.benefitsTitle": "Переваги Використання Віджетів",
-    "widgets.benefit1": "Покращує функціональність сайту.",
-    "widgets.benefit2": "Додають нові функції, що полегшують роботу в інтернеті.",
-    "widgets.benefit3": "Покращує залученість користувачів.",
-    "widgets.benefit4": "Можливість налаштування під конкретні потреби.",
-    "widgets.exampleTitle": "Практичний Приклад",
-    "widgets.exampleDescription": "Віджет справа внизу сторінки (Currencies Widget) є практичним корисним прикладом такого роду програм.",
-    "widgets.downloadLink": "Завантажити безкоштовно",
-    "websites.title": "Розробка Сайтів на Замовлення",
-    "websites.description": "У Mark Digital ми спеціалізуємося на створенні сайтів на замовлення, що відповідають вашим потребам. Від простих лендінгів до складних веб-додатків — ми робимо все.",
-    "websites.examplesTitle": "Наші Роботи",
-    "websites.converterTitle": "Конвертер Одиниць",
-    "websites.converterDescription": "Універсальний конвертер одиниць для різних величин, включаючи довжину, числа та кути.",
-    "websites.portfolioTitle": "Сайт-Портфоліо",
-    "websites.portfolioDescription": "Сайт-портфоліо, що демонструє різноманітні проекти та навички.",
-    "websites.benefitsTitle": "Чому Обирають Нас",
-    "websites.benefit1": "Професійний та сучасний дизайн.",
-    "websites.benefit2": "Адаптивні та мобільно-дружні макети.",
-    "websites.benefit3": "Індивідуальні рішення для задоволення ваших потреб.",
-    "websites.benefit4": "Надійне та своєчасне виконання проектів.",
-    "websites.contactTitle": "Зв'яжіться з Нами",
-    "websites.contactDescription": "Зв'яжіться з нами сьогодні, щоб обговорити ваші вимоги до проекту та отримати безкоштовну консультацію.",
-    "serverTechnologies.title": "Серверні Технології та Бази Даних",
-    "serverTechnologies.description": "У Mark Digital ми маємо великий досвід роботи з серверними технологіями та базами даних. Від побудови надійних серверних систем до управління даними з використанням різних баз даних — ми пропонуємо комплексні рішення.",
-    "serverTechnologies.examplesTitle": "Наші Проекти",
-    "serverTechnologies.lykkeStoreTitle": "Lykke Store",
-    "serverTechnologies.lykkeStoreDescription": "Повноцінний сервер на Node.js для онлайн-магазину Lykke Store з високою функціональністю та бездоганною продуктивністю.",
-    "serverTechnologies.skillsTitle": "Використовувані Технології",
-    "serverTechnologies.skillNode": "Node.js для створення масштабованих та ефективних серверів.",
-    "serverTechnologies.skillMongoDB": "MongoDB для гнучких та масштабованих NoSQL рішень.",
-    "serverTechnologies.skillSQLite3": "SQLite3 для легких та ефективних локальних баз даних.",
-    "serverTechnologies.skillPostgreSQL": "PostgreSQL для передового управління реляційними базами даних.",
-    "serverTechnologies.contactTitle": "Зв'яжіться з Нами",
-    "serverTechnologies.contactDescription": "Зв'яжіться з нами сьогодні, щоб обговорити ваші потреби у серверних технологіях та базах даних, і отримати безкоштовну консультацію.",
-    "privacy.title": "Політика конфіденційності",
-    "privacy.intro": "1. Вступ",
-    "privacy.introContent": "Ця політика конфіденційності описує, як ми збираємо, використовуємо та захищаємо ваші дані при використанні додатків. Ми поважаємо вашу приватність і зобов'язуємося захищати вашу особисту інформацію.",
-    "privacy.collection": "2. Збір інформації",
-    "privacy.collectionContent": "Ми не збираємо ніякої особистої інформації при використанні наших додатків. Адд-они працюють локально на вашому пристрої та не передають жодних даних на наші сервери або третім сторонам.",
-    "privacy.usage": "3. Використання інформації",
-    "privacy.usageContent": "Оскільки ми не збираємо особисту інформацію, ми не маємо можливості використовувати її в будь-який спосіб.",
-    "privacy.security": "4. Безпека",
-    "privacy.securityContent": "Ми приймаємо відповідні заходи для захисту вашої інформації. Додатки не вимагають доступу до ваших особистих даних або інших конфіденційних інформацій.",
-    "privacy.thirdParties": "5. Взаємодія з третіми сторонами",
-    "privacy.thirdPartiesContent": "Наші додатки не взаємодіють з жодними сторонніми компаніями. Всі функції працюють автономно на вашому пристрої.",
-    "privacy.changes": "6. Зміни до політики конфіденційності",
-    "privacy.changesContent": "Ми можемо час від часу оновлювати цю політику конфіденційності. Всі зміни будуть публікуватися на цій сторінці. Ми рекомендуємо періодично переглядати цю сторінку, щоб бути в курсі будь-яких змін.",
-    "privacy.contacts": "7. Контакти",
-    "privacy.contactsContent": "Якщо у вас виникли питання щодо цієї політики конфіденційності, будь ласка, зв'яжіться з нами за наступними контактами:",
-    "privacy.email": "Ел. пошта",
-    "privacy.website": "Веб-сайт",
-    "offer.title": "Договір публічної оферти",
-    "offer.intro": "Цей Договір є публічною офертою (пропозицією) ФОП Марков Олександр Іванович (далі - 'Виконавець'), адресованою будь-якій фізичній або юридичній особі, яка виявила бажання скористатися послугами або придбати товари, що пропонуються Виконавцем через веб-сайт.",
-    "offer.generalProvisions": "1. Загальні положення",
-    "offer.generalProvisionsContent1": "1.1. Цей Договір укладається між Виконавцем та Користувачем.",
-    "offer.generalProvisionsContent2": "1.2. Договір є офіційним документом і публікується на веб-сайті Виконавця.",
-    "offer.generalProvisionsContent3": "1.3. Користувач підтверджує, що ознайомлений з умовами цього Договору та приймає їх шляхом використання послуг або придбання товарів, що пропонуються на веб-сайті.",
-    "offer.termsDefinitions": "2. Терміни та визначення",
-    "offer.termsDefinitionsContent1": "2.1. 'Користувач' - будь-яка фізична або юридична особа, яка прийняла умови цього Договору та користується послугами або товарами, що пропонуються на веб-сайті.",
-    "offer.termsDefinitionsContent2": "2.2. 'Послуги' - будь-які послуги, що надаються Виконавцем через веб-сайт.",
-    "offer.termsDefinitionsContent3": "2.3. 'Товари' - будь-які цифрові продукти, що пропонуються для продажу Виконавцем через веб-сайт.",
-    "offer.rightsDutiesParties": "3. Права та обов'язки сторін",
-    "offer.rightsDutiesProvider": "3.1. Права та обов'язки Виконавця:",
-    "offer.rightsDutiesProviderContent1": "3.1.1. Надавати Користувачу доступ до Послуг та Товарів згідно з умовами цього Договору.",
-    "offer.rightsDutiesProviderContent2": "3.1.2. Інформувати Користувача про зміни в умовах надання Послуг та Товарів.",
-    "offer.rightsDutiesProviderContent3": "3.1.3. Забезпечити конфіденційність персональних даних Користувача згідно з Політикою конфіденційності.",
-    "offer.rightsDutiesUser": "3.2. Права та обов'язки Користувача:",
-    "offer.rightsDutiesUserContent1": "3.2.1. Використовувати Послуги та Товари згідно з умовами цього Договору.",
-    "offer.rightsDutiesUserContent2": "3.2.2. Оплачувати Послуги та Товари згідно з умовами цього Договору.",
-    "offer.rightsDutiesUserContent3": "3.2.3. Не розповсюджувати та не використовувати Товари для незаконних цілей.",
-    "offer.paymentProcedure": "4. Порядок оплати",
-    "offer.paymentProcedureContent1": "4.1. Оплата Послуг та Товарів здійснюється Користувачем шляхом перерахування грошових коштів на рахунок Виконавця, зазначений на веб-сайті, або через платіжні системи, вказані на веб-сайті.",
-    "offer.paymentProcedureContent2": "4.2. Розрахунки між сторонами здійснюються в національній валюті України (гривня). У разі потреби, оплата може здійснюватися в іншій валюті згідно з умовами окремої угоди.",
-    "offer.paymentProcedureContent3": "4.3. Усі витрати, пов'язані з переказом грошових коштів, несе Користувач.",
-    "offer.paymentProcedureContent4": "4.4. Донати є добровільними та не зобов'язують Виконавця надавати додаткові послуги чи товари, окрім тих, що вже зазначені у Договорі.",
-    "offer.liabilityParties": "5. Відповідальність сторін",
-    "offer.liabilityPartiesContent1": "5.1. За невиконання або неналежне виконання зобов'язань за цим Договором сторони несуть відповідальність згідно з чинним законодавством України.",
-    "offer.liabilityPartiesContent2": "5.2. Виконавець не несе відповідальності за будь-які збитки, що можуть виникнути у Користувача в результаті використання веб-розширень та супутніх програм.",
-    "offer.liabilityPartiesContent3": "5.3. Користувач несе відповідальність за дотримання законодавства своєї країни при використанні веб-розширень та супутніх програм Виконавця.",
-    "offer.liabilityPartiesContent4": "5.4. Виконавець не несе відповідальності за невиконання або неналежне виконання обов'язків за цим Договором, якщо це було спричинено дією обставин непереборної сили (форс-мажор), таких як війна, заколоти, природні катастрофи, пожежі, страйки, дії органів державної влади, тощо.",
-    "offer.concludingProvisions": "6. Заключні положення",
-    "offer.concludingProvisionsContent1": "6.1. Договір набирає чинності з моменту його акцепту Користувачем та діє до повного виконання зобов'язань сторонами.",
-    "offer.concludingProvisionsContent2": "6.2. Усі спори, що виникають у зв'язку з виконанням цього Договору, вирішуються шляхом переговорів між сторонами.",
-    "offer.concludingProvisionsContent3": "6.3. У разі неможливості досягнення згоди спір передається на розгляд до суду згідно з чинним законодавством України.",
-    "offer.concludingProvisionsContent4": "6.4. Цей договір складено українською мовою. Для міжнародних користувачів може бути надано переклад цього Договору англійською мовою. У разі розбіжностей між україномовною та англомовною версіями Договору перевагу має україномовна версія.",
-    "offer.concludingProvisionsContent5": "6.5. Усі зміни та доповнення до цього Договору дійсні лише в разі, якщо вони оформлені в письмовій формі та підписані обома сторонами або опубліковані Виконавцем на офіційному веб-сайті.",
-    "offer.providerDetails": "7. Реквізити Виконавця",
-    "offer.providerDetailsContent1": "ФОП Марков Олександр Іванович",
-    "offer.providerDetailsContent2": "ІПН: 3157117350",
-    "offer.providerDetailsContent3": "Реєстр.№: 2010350000000602837 від 22.07.2024",
-    "offer.providerDetailsContent4": "IBAN: UA623052990000026006050592532",
-    "offer.providerDetailsContent5": "Платник єдиного податку 3 група, ставка 5%. Не є платником ПДВ",
-    "offer.providerDetailsContent6": "Адреса: Україна, 52800, Дніпропетровська обл., Синельниківський р - н, місто Першотравенськ, вулиця Українська, будинок 18",
-    "offer.providerDetailsContent7": "Ел. пошта: ",
-    "page404.notFound": 'Сторінку не знайдено',
-    "page404.info": 'Повернутись на головну сторінку',
-    "page404.back": 'На головну',
-    "header.home": "Головна",
-    "header.addons": "Адд-они",
-    "header.getJoke": "Get Joke Extension",
-    "header.widgets": "Віджети та Плагіни",
-    "header.websites": "Розробка Сайтів на Замовлення",
-    "header.servers": "Серверні технології та БД",
-    "header.privacy": "Політика конфіденційності",
-    "header.offer": "Договір публічної оферти",
-    "footer.name": "ФОП Марков Олександр Іванович",
-    "footer.email": "Ел. пошта",
-    "footer.copyright": "Mark Digital © 2024"
-  }
-};
+import { getAnalytics, firebase, db, addDoc, collection, serverTimestamp } from './firebase-config.js';
+import messages from './messages.js';
 
 const mainLocale = (function() {
   return window.navigator.language == 'uk-UA' || window.navigator.language == 'ru-RU' ? 'ua' : 'en';
@@ -308,7 +12,7 @@ const i18n = VueI18n.createI18n({
   messages,
 });
 
-const About = {
+const AboutPage = {
   template: `
   <section class="intro">
     <div class="container">
@@ -316,10 +20,10 @@ const About = {
       <p>{{ $t("about.description") }}</p>
       
       <h2>{{ $t("about.productsTitle") }}</h2>
-      <p>{{ $t("about.productsDescription1") }}<a href="https://chrome.google.com/webstore/detail/gaefccmkkolgdkabjfekngcmagioflne" target="_blank">Chrome Web Store</a>{{ $t("about.productsDescription2") }}<a href="https://addons.mozilla.org/firefox/addon/getjoke" target="_blank">AMO</a>{{ $t("about.productsDescription3") }}<a href="https://www.buymeacoffee.com" target="_blank">Buy Me a Coffee</a>{{ $t("about.productsDescription4") }}</p>
+      <p>{{ $t("about.productsDescription1") }}<a href="https://chrome.google.com/webstore/detail/gaefccmkkolgdkabjfekngcmagioflne" target="_blank">Chrome Web Store</a>{{ $t("about.productsDescription2") }}<a href="https://addons.mozilla.org/firefox/addon/getjoke" target="_blank">Addons Mozilla Org (AMO)</a>{{ $t("about.productsDescription3") }}</p>
       
-      <h2>{{ $t("about.teamTitle") }}</h2>
-      <p>{{ $t("about.teamDescription") }}</p>
+      <h2>{{ $t("about.principlesTitle") }}</h2>
+      <p>{{ $t("about.principlesDescription") }}</p>
       
       <h2>{{ $t("about.contactsTitle") }}</h2>
       <p>{{ $t("about.contactsDescription") }}</p>
@@ -341,9 +45,12 @@ const About = {
   }
 };
 
+const AddonsPage = {
+  data() {
+    return {
 
-const Addons = {
-  data() { return {} },
+    }
+  },
   template: `
     <section class="addons">
       <div class="container">
@@ -369,12 +76,24 @@ const Addons = {
           <h2>{{ $t("addons.exampleAddonTitle") }}</h2>
           <p>{{ $t("addons.exampleAddonDescription") }} <router-link to="/getjoke">Get Joke Extension</router-link>.</p>
         </section>
+        <section class="order">
+          <h2>{{ $t("addons.orderTitle") }}</h2>
+          <p>{{ $t("addons.orderTime") }}</p>
+          <p>{{ $t("addons.orderPrice") }}</p>
+          <button class="submit-button" @click="openPopup">{{ $t("order.btnText") }}</button>
+          <popup-form ref="popupForm"></popup-form>
+        </section>
       </div>
     </section>
-  `
+  `,
+  methods: {
+    openPopup() {
+      this.$refs.popupForm.openPopup('addons');
+    }
+  }
 };
 
-const GetJoke = {
+const GetJokePage = {
   data() {
     return {
       joke: '',
@@ -395,6 +114,9 @@ const GetJoke = {
           this.joke = this.$t("getjoke.error");
           console.error('Error fetching joke:', error);
         });
+    },
+    openPopup() {
+      this.$refs.popupForm.openPopup('getjoke');
     }
   },
   template: `
@@ -408,12 +130,19 @@ const GetJoke = {
         <img src="../images/getjoke.png" alt="getjoke.png">
         <br>
         <p>{{ $t("getjoke.tryApi") }}</p>
-        <button @click="getJoke">{{ $t("getjoke.getJokeButton") }}</button>
+        <button class="btn-api" @click="getJoke">{{ $t("getjoke.getJokeButton") }}</button>
         <div v-if="joke" id="joke-display" v-html="joke"></div>
         <div class="download-buttons">
           <a href="https://addons.mozilla.org/firefox/addon/getjoke" target="_blank" class="download-btn">{{ $t("getjoke.downloadFirefox") }}</a>
           <a href="https://chrome.google.com/webstore/detail/gaefccmkkolgdkabjfekngcmagioflne" target="_blank" class="download-btn">{{ $t("getjoke.downloadChrome") }}</a>
         </div>
+        <section class="order">
+          <h2>{{ $t("addons.orderTitle") }}</h2>
+          <p>{{ $t("addons.orderTime") }}</p>
+          <p>{{ $t("addons.orderPrice") }}</p>
+          <button class="submit-button" @click="openPopup">{{ $t("order.btnText") }}</button>
+          <popup-form ref="popupForm"></popup-form>
+        </section>
       </div>
     </section>
   `
@@ -449,9 +178,21 @@ const WidgetPage = {
           <img :src="widgetScreenshot" alt="Currencies Widget Screenshot">
           <a href="https://github.com/MarkAlexI/currenciesWidget" target="_blank">{{ $t("widgets.downloadLink") }}</a>
         </section>
+        <section class="order">
+          <h2>{{ $t("widgets.orderTitle") }}</h2>
+          <p>{{ $t("widgets.orderTime") }}</p>
+          <p>{{ $t("widgets.orderPrice") }}</p>
+          <button class="submit-button" @click="openPopup">{{ $t("order.btnText") }}</button>
+          <popup-form ref="popupForm"></popup-form>
+        </section>
       </div>
     </section>
   `,
+  methods: {
+    openPopup() {
+      this.$refs.popupForm.openPopup('widgets');
+    }
+  },
   mounted() {
     this.scriptElement = document.createElement('script');
     this.scriptElement.src = '/js/currenciesWidget.min.js';
@@ -515,9 +256,21 @@ const WebsitesPage = {
           <h2>{{ $t("websites.contactTitle") }}</h2>
           <p>{{ $t("websites.contactDescription") }}</p>
         </section>
+        <section class="order">
+          <h2>{{ $t("websites.orderTitle") }}</h2>
+          <p>{{ $t("websites.orderTime") }}</p>
+          <p>{{ $t("websites.orderPrice") }}</p>
+          <button class="submit-button" @click="openPopup">{{ $t("order.btnText") }}</button>
+          <popup-form ref="popupForm"></popup-form>
+        </section>
       </div>
     </section>
-  `
+  `,
+  methods: {
+    openPopup() {
+      this.$refs.popupForm.openPopup('websites');
+    }
+  }
 };
 
 const ServerTechnologiesPage = {
@@ -559,7 +312,7 @@ const ServerTechnologiesPage = {
   `
 };
 
-const Privacy = {
+const PrivacyPage = {
   template: `
     <section class="privacy-policy">
       <div class="container">
@@ -585,70 +338,69 @@ const Privacy = {
   `
 };
 
-const Offer = {
+const OfferPage = {
   template: `
-     <section class="offer">
-       <div class="container">
-            <h1>{{ $t("offer.title") }}</h1>
-            <p>{{ $t("offer.intro") }}</p>
+    <section class="offer">
+      <div class="container">
+          <h1>{{ $t("offer.title") }}</h1>
+          <p>{{ $t("offer.intro") }}</p>
 
-            <h2>{{ $t("offer.generalProvisions") }}</h2>
-            <p>{{ $t("offer.generalProvisionsContent1") }}</p>
-            <p>{{ $t("offer.generalProvisionsContent2") }}</p>
-            <p>{{ $t("offer.generalProvisionsContent3") }}</p>
+          <h2>{{ $t("offer.generalProvisions") }}</h2>
+          <p>{{ $t("offer.generalProvisionsContent1") }}</p>
+          <p>{{ $t("offer.generalProvisionsContent2") }}</p>
+          <p>{{ $t("offer.generalProvisionsContent3") }}</p>
 
-            <h2>{{ $t("offer.termsDefinitions") }}</h2>
-            <p>{{ $t("offer.termsDefinitionsContent1") }}</p>
-            <p>{{ $t("offer.termsDefinitionsContent2") }}</p>
-            <p>{{ $t("offer.termsDefinitionsContent3") }}</p>
+          <h2>{{ $t("offer.termsDefinitions") }}</h2>
+          <p>{{ $t("offer.termsDefinitionsContent1") }}</p>
+          <p>{{ $t("offer.termsDefinitionsContent2") }}</p>
+          <p>{{ $t("offer.termsDefinitionsContent3") }}</p>
 
-            <h2>{{ $t("offer.rightsDutiesParties") }}</h2>
-            <h3>{{ $t("offer.rightsDutiesProvider") }}</h3>
-            <ul>
-                <li>{{ $t("offer.rightsDutiesProviderContent1") }}</li>
-                <li>{{ $t("offer.rightsDutiesProviderContent2") }}</li>
-                <li>{{ $t("offer.rightsDutiesProviderContent3") }}</li>
-            </ul>
+          <h2>{{ $t("offer.rightsDutiesParties") }}</h2>
+          <h3>{{ $t("offer.rightsDutiesProvider") }}</h3>
+          <ul>
+              <li>{{ $t("offer.rightsDutiesProviderContent1") }}</li>
+              <li>{{ $t("offer.rightsDutiesProviderContent2") }}</li>
+              <li>{{ $t("offer.rightsDutiesProviderContent3") }}</li>
+          </ul>
 
-            <h3>{{ $t("offer.rightsDutiesUser") }}</h3>
-            <ul>
-                <li>{{ $t("offer.rightsDutiesUserContent1") }}</li>
-                <li>{{ $t("offer.rightsDutiesUserContent2") }}</li>
-                <li>{{ $t("offer.rightsDutiesUserContent3") }}</li>
-            </ul>
+          <h3>{{ $t("offer.rightsDutiesUser") }}</h3>
+          <ul>
+              <li>{{ $t("offer.rightsDutiesUserContent1") }}</li>
+              <li>{{ $t("offer.rightsDutiesUserContent2") }}</li>
+              <li>{{ $t("offer.rightsDutiesUserContent3") }}</li>
+          </ul>
 
-            <h2>{{ $t("offer.paymentProcedure") }}</h2>
-            <p>{{ $t("offer.paymentProcedureContent1") }}</p>
-            <p>{{ $t("offer.paymentProcedureContent2") }}</p>
-            <p>{{ $t("offer.paymentProcedureContent3") }}</p>
-            <p>{{ $t("offer.paymentProcedureContent4") }}</p>
+          <h2>{{ $t("offer.paymentProcedure") }}</h2>
+          <p>{{ $t("offer.paymentProcedureContent1") }}</p>
+          <p>{{ $t("offer.paymentProcedureContent2") }}</p>
 
-            <h2>{{ $t("offer.liabilityParties") }}</h2>
-            <p>{{ $t("offer.liabilityPartiesContent1") }}</p>
-            <p>{{ $t("offer.liabilityPartiesContent2") }}</p>
-            <p>{{ $t("offer.liabilityPartiesContent3") }}</p>
-            <p>{{ $t("offer.liabilityPartiesContent4") }}</p>
+          <h2>{{ $t("offer.liabilityParties") }}</h2>
+          <p>{{ $t("offer.liabilityPartiesContent1") }}</p>
+          <p>{{ $t("offer.liabilityPartiesContent2") }}</p>
+          <p>{{ $t("offer.liabilityPartiesContent3") }}</p>
+          <p>{{ $t("offer.liabilityPartiesContent4") }}</p>
 
-            <h2>{{ $t("offer.concludingProvisions") }}</h2>
-            <p>{{ $t("offer.concludingProvisionsContent1") }}</p>
-            <p>{{ $t("offer.concludingProvisionsContent2") }}</p>
-            <p>{{ $t("offer.concludingProvisionsContent3") }}</p>
-            <p>{{ $t("offer.concludingProvisionsContent4") }}</p>
-            <p>{{ $t("offer.concludingProvisionsContent5") }}</p>
+          <h2>{{ $t("offer.concludingProvisions") }}</h2>
+          <p>{{ $t("offer.concludingProvisionsContent1") }}</p>
+          <p>{{ $t("offer.concludingProvisionsContent2") }}</p>
+          <p>{{ $t("offer.concludingProvisionsContent3") }}</p>
+          <p>{{ $t("offer.concludingProvisionsContent4") }}</p>
+          <p>{{ $t("offer.concludingProvisionsContent5") }}</p>
 
-            <h2>{{ $t("offer.providerDetails") }}</h2>
-            <p><span>{{ $t("offer.providerDetailsContent1") }}</span></p>
-            <p>{{ $t("offer.providerDetailsContent2") }}</p>
-            <p>{{ $t("offer.providerDetailsContent3") }}</p>
-            <p><span>{{ $t("offer.providerDetailsContent4") }}</span></p>
-            <p>{{ $t("offer.providerDetailsContent5") }}</p>
-            <p>{{ $t("offer.providerDetailsContent6") }}</p>
-            <p>{{ $t("offer.providerDetailsContent7") }}<a href="mailto:markdigital100@outlook.com" target="_blank">markdigital100@outlook.com</a></p>
-          </div>
-        </section>`
+          <h2>{{ $t("offer.providerDetails") }}</h2>
+          <p><span>{{ $t("offer.providerDetailsContent1") }}</span></p>
+          <p>{{ $t("offer.providerDetailsContent2") }}</p>
+          <p>{{ $t("offer.providerDetailsContent3") }}</p>
+          <p><span>{{ $t("offer.providerDetailsContent4") }}</span></p>
+          <p><span>{{ $t("offer.providerDetailsContent5") }}</span></p>
+          <p>{{ $t("offer.providerDetailsContent6") }}</p>
+          <p>{{ $t("offer.providerDetailsContent7") }}</p>
+          <p>{{ $t("offer.providerDetailsContent8") }}<a href="mailto:markdigital100@outlook.com" target="_blank">markdigital100@outlook.com</a></p>
+        </div>
+      </section>`
 };
 
-const NotFound = {
+const NotFoundPage = {
   template: `<section>
     <div class="container">
       <h2>{{ $t("page404.notFound") }}</h2>
@@ -659,15 +411,15 @@ const NotFound = {
 };
 
 const routes = [
-  { path: '/', component: About },
-  { path: '/addons', component: Addons },
-  { path: '/getjoke', component: GetJoke },
+  { path: '/', component: AboutPage },
+  { path: '/addons', component: AddonsPage },
+  { path: '/getjoke', component: GetJokePage },
   { path: '/widgets', component: WidgetPage },
-  { path: '/privacy', component: Privacy },
-  { path: '/offer', component: Offer },
+  { path: '/privacy', component: PrivacyPage },
+  { path: '/offer', component: OfferPage },
   { path: '/websites', component: WebsitesPage },
   { path: '/server-technologies', component: ServerTechnologiesPage },
-  { path: '/:pathMatch(.*)*', component: NotFound }
+  { path: '/:pathMatch(.*)*', component: NotFoundPage }
 ];
 
 const router = VueRouter.createRouter({
@@ -683,7 +435,12 @@ const app = Vue.createApp({
   },
   data() {
     return {
-      mainLocale
+      mainLocale,
+      db: null,
+      addDoc: null,
+      collection: null,
+      serverTimestamp: null,
+      firebaseReady: false
     }
   },
 });
@@ -703,7 +460,6 @@ app.component('my-header', {
             <li><router-link to="/getjoke">{{ $t("header.getJoke") }}</router-link></li>
             <li><router-link to="/widgets">{{ $t("header.widgets") }}</router-link></li>
             <li><router-link to="/websites">{{ $t("header.websites") }}</router-link></li>
-            <li><router-link to="/server-technologies">{{ $t("header.servers") }}</router-link></li>
             <li><router-link to="/privacy">{{ $t("header.privacy") }}</router-link></li>
             <li><router-link to="/offer">{{ $t("header.offer") }}</router-link></li>
           </ul>
@@ -712,6 +468,77 @@ app.component('my-header', {
       </header>
     </section>
   `
+});
+
+app.component('popup-form', {
+  template: `
+    <div v-if="isVisible" class="popup-overlay">
+      <div class="popup-content">
+        <button class="close-button" @click="closePopup">X</button>
+        <form @submit.prevent="submitForm">
+          <div class="input-group">
+            <label for="name" class="label">{{ $t('popup.name') }}</label>
+            <input type="text" id="name" v-model="name" required maxlength="100" :placeholder="$t('popup.name.placeholder')" class="input">
+          </div>
+          <div class="input-group">
+            <label for="service" class="label">{{ $t('popup.target') }}</label>
+            <input type="text" id="service" v-model="service" required maxlength="200" :placeholder="$t('popup.target.placeholder')" class="input">
+          </div>
+          <div class="input-group">
+            <label for="email" class="label">{{ $t("popup.call") }}</label>
+            <input type="email" id="email" v-model="email" required maxlength="100" placeholder="yourmail@gmail.com" class="input">
+          </div>
+          <div class="input-group">
+            <label for="phone" class="label">{{ $t("popup.phone") }}</label>
+            <input type="text" id="phone" v-model="phone" required maxlength="100" placeholder="+38(050)123-45-67" class="input">
+          </div>
+          <div class="button-container">
+            <button type="submit" class="submit-button">
+              <span>{{ $t("popup.submit") }}</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  `,
+  data() {
+    return {
+      isVisible: false,
+      name: '',
+      service: '',
+      email: '',
+      phone: '',
+      component: ''
+    };
+  },
+  methods: {
+    openPopup(fromPage) {
+      this.isVisible = true;
+      this.fromPage = fromPage;
+    },
+    closePopup() {
+      this.isVisible = false;
+      this.fromPage = '';
+    },
+    async submitForm() {
+      try {
+        await addDoc(collection(db, 'requests'), {
+          name: this.name,
+          service: this.service,
+          email: this.email,
+          phone: this.phone,
+          component: this.fromPage,
+          timestamp: serverTimestamp()
+        });
+
+        alert('Form submitted successfully!');
+        this.closePopup();
+      } catch (error) {
+        console.error('Error writing document: ', error);
+        alert('Failed to submit form.');
+      }
+    }
+  }
 });
 
 app.component('drop-down-langs', {
@@ -723,16 +550,16 @@ app.component('drop-down-langs', {
     }
   },
   template: `<div class="dropdown">
-    <button class="dropdown__btn" @click="toggleDropdown">
-      <img :src="myImageSource" :key="selectedLanguage" class="flag"/>
+    <button class="dropdown__btn" @click="toggleDropdown" aria-label="toggle dropdown" >
+      <img :src="myImageSource" :key="selectedLanguage" class="flag" alt="image for language" />
     </button>
     <transition>
       <div class="dropdown__menu" v-if="isDropdownOpened">
         <a href="#" class="dropdown__item" :class="selectedLanguage === 'en' ? 'active' : ''" @click.prevent="changeLanguage('en')">
-          <img src="/images/us.png" class="flag" /> {{ $t("dropdown.en") }}
+          <img src="/images/us.png" class="flag" alt="USA flag" /> {{ $t("dropdown.en") }}
         </a>
         <a href="#" class="dropdown__item" :class="selectedLanguage === 'ua' ? 'active' : ''" @click.prevent="changeLanguage('ua')">
-          <img src="/images/ua.png" class="flag" /> {{ $t("dropdown.ua") }}
+          <img src="/images/ua.png" class="flag" alt="UA flag" /> {{ $t("dropdown.ua") }}
         </a>
       </div>
     </transition>
@@ -756,12 +583,50 @@ app.component('drop-down-langs', {
   }
 });
 
+app.component('consent-banner', {
+  data() {
+    return {
+      isVisibleBanner: false
+    }
+  },
+  template: `
+    <div v-if="isVisibleBanner" class="consent-banner">
+      {{ $t("consent.text") }}
+      <div>
+        <a href="/privacy" target="_blank">{{ $t("consent.detail") }}</a>
+        <button class="accept-button" @click="acceptCookies">{{ $t("consent.accept") }}</button>
+      </div>
+    </div>
+  `,
+  methods: {
+    showCookieConsent() {
+      this.isVisibleBanner = true;
+    },
+    initGoogleAnalytics() {
+      this.analytics = getAnalytics(firebase);
+    },
+    acceptCookies() {
+      document.cookie = "mark_digital_cookies_accepted=true; path=/; max-age=" + (60 * 60 * 24 * 365);
+      this.isVisibleBanner = false;
+    }
+  },
+  mounted() {
+    if (!document.cookie.split('; ').find(row => row.startsWith('mark_digital_cookies_accepted'))) {
+      this.showCookieConsent();
+    } else {
+      this.initGoogleAnalytics();
+    }
+  }
+});
+
 app.component('my-footer', {
-  template: `<footer>
-    <p>{{ $t("footer.name") }}</p>
-    <p>{{ $t("footer.email") }}: <a href="mailto:markdigital100@outlook.com" target="_blank">markdigital100@outlook.com</a></p>
-    <p>{{ $t("footer.copyright") }}</p>
-  </footer>`
+  template: `
+    <footer>
+      <p>{{ $t("footer.name") }}</p>
+      <p>{{ $t("footer.email") }}: <a href="mailto:markdigital100@outlook.com" target="_blank">markdigital100@outlook.com</a></p>
+      <p>{{ $t("footer.copyright") }}</p>
+    </footer>
+  `
 });
 
 app.use(router);
