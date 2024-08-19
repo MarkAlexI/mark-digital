@@ -24,11 +24,11 @@ h6 {
 body {
   background-color: #1a1a1a;
   height: 100vh;
-  background-attachment: fixed;
+/*  background-attachment: fixed;
   background-image: url('/images/back.jpeg');
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
   display: flex;
   justify-content: center;
   min-width: 320px;
