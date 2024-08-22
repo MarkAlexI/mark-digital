@@ -219,6 +219,7 @@ const WidgetPage = {
 const WebsitesPage = {
   data() {
     return {
+      flowerScreenshot: '/images/flower.jpg',
       converterScreenshot: '/images/converter.png',
       portfolioScreenshot: '/images/portfolio.png'
     };
@@ -233,7 +234,14 @@ const WebsitesPage = {
         <section class="examples">
           <h2>{{ $t("websites.examplesTitle") }}</h2>
           <div class="example">
+            <h3>{{ $t("websites.flowerTitle") }}</h3>
+            <a target="_blank" href="https://selena.pp.ua">selena.pp.ua</a>
+            <p>{{ $t("websites.flowerDescription") }}</p>
+            <img :src="flowerScreenshot" alt="Flower Screenshot">
+          </div>
+          <div class="example">
             <h3>{{ $t("websites.converterTitle") }}</h3>
+            <a target="_blank" href="https://markalexi.github.io/tryConvert/">tryConvert</a>
             <p>{{ $t("websites.converterDescription") }}</p>
             <img :src="converterScreenshot" alt="Converter Screenshot">
           </div>
