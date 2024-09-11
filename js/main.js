@@ -21,6 +21,10 @@ const AboutPage = {
       
       <h2>{{ $t("about.productsTitle") }}</h2>
       <p>{{ $t("about.productsDescription1") }}<a href="https://chrome.google.com/webstore/detail/gaefccmkkolgdkabjfekngcmagioflne" target="_blank">Chrome Web Store</a>{{ $t("about.productsDescription2") }}<a href="https://addons.mozilla.org/firefox/addon/getjoke" target="_blank">Addons Mozilla Org (AMO)</a>{{ $t("about.productsDescription3") }}</p>
+      <p>{{ $t("about.productsDescription4") }}<router-link to="/websites">{{ $t("about.productsDescription5") }}</router-link>{{ $t("about.productsDescription6") }}<router-link to="/widgets">{{ $t("about.productsDescription7") }}</router-link></p>
+      
+      <h2>{{ $t("about.whyUsTitle") }}</h2>
+      <p>{{ $t("about.whyUsDescription") }}</p>
       
       <h2>{{ $t("about.principlesTitle") }}</h2>
       <p>{{ $t("about.principlesDescription") }}</p>
@@ -57,6 +61,7 @@ const AddonsPage = {
         <section class="about-addons">
           <h1>{{ $t("addons.title") }}</h1>
           <p>{{ $t("addons.description") }}</p>
+          <p>{{ $t("addons.extInfo") }}<a href="https://ext.pp.ua">{{ $t("addons.extLink") }}</a>.</p>
         </section>
         <section class="benefits">
           <h2>{{ $t("addons.benefitsTitle") }}</h2>
@@ -74,7 +79,9 @@ const AddonsPage = {
         </section>
         <section class="example-addon">
           <h2>{{ $t("addons.exampleAddonTitle") }}</h2>
-          <p>{{ $t("addons.exampleAddonDescription") }} <router-link to="/getjoke">Get Joke Extension</router-link>.</p>
+          <p>{{ $t("addons.exampleAddonDescription") }} <a href="https://ext.pp.ua/get-joke-extension.html">Get Joke Extension</a>.</p>
+          <p>{{ $t("addons.exampleAddonDescription2") }} <a href="https://ext.pp.ua/blocksite.html">Block Site Extension</a>.</p>
+          <p>{{ $t("addons.exampleAddonDescription3") }} <a href="https://addons.mozilla.org/uk/firefox/addon/galactic-focus/">Galactic Focus</a>.</p>
         </section>
         <section class="order">
           <h2>{{ $t("addons.orderTitle") }}</h2>
