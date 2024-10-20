@@ -82,6 +82,7 @@ const AddonsPage = {
           <p>{{ $t("addons.exampleAddonDescription") }} <a href="https://ext.pp.ua/get-joke-extension.html">Get Joke Extension</a>.</p>
           <p>{{ $t("addons.exampleAddonDescription2") }} <a href="https://ext.pp.ua/blocksite.html">Block Site Extension</a>.</p>
           <p>{{ $t("addons.exampleAddonDescription3") }} <a href="https://addons.mozilla.org/uk/firefox/addon/galactic-focus/">Galactic Focus</a>.</p>
+          <p>{{ $t("addons.exampleAddonDescription4") }} <a href="https://chromewebstore.google.com/detail/pkjgeongdbblpjfaoagnicpcfckhnoil">Chrome Web Store</a>.</p>
         </section>
         <section class="order">
           <h2>{{ $t("addons.orderTitle") }}</h2>
